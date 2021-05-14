@@ -14,7 +14,11 @@ public class OperadorOu {
 		cupom = leitor.next();
 		
 		//Aqui é preciso criar um if que verifique as duas condições para que o desconto seja ou não aplicado
-		
+		if(totalCompra > 1000 || cupom.equalsIgnoreCase("desconto20")) {	
+			valorFinal = totalCompra * 0.8;
+		}else {
+			valorFinal = totalCompra;
+		}
 		System.out.println("O valor final é de R$" + valorFinal);
 
 	}
